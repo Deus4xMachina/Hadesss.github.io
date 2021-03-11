@@ -30,29 +30,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            写给自己，当然也欢迎其他人
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -97,18 +77,72 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="ri-bookmark-2-line"></i> 标签云
-        </h2>
-        <div class="tags-container">
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">Js高级 显式原型与隐式原型</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-03-11 / 1 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://deus4xmachina.github.io/Hadesss.github.io//post-images/js-gao-ji-xian-shi-yuan-xing-yu-yin-shi-yuan-xing.png" alt="">
+        
+        <div class="post-content yue">
+          <!-- more -->
+<p>🍏function Person （） {<br>
+// 创建函数的时候，内部语句：this.prototype = {} 一个空的Object对象<br>
+}pro<br>
+💡1.每个函数function都有一个prototype，即显式原型（属性）<br>
+prototype指向函数的原型对象<br>
+console.log(Person===Person.prototype.constructor)  //true<br>
+💡2.每个实例对象都有一个__proto__，即称隐式原型（属性）</p>
+<p>// 创建实例对象</p>
+<p>🍎let person = new Person() // js引擎在创建实例的时候，做了一个赋值操作，内部语句：this.<strong>proto</strong> = Person.prototype</p>
+<p>👀给原型添加方法</p>
+<p>🍌Person.prototype.test = function () {</p>
+<p>console.log('test()')；</p>
+<p>}<br>
+👀通过实例对象调用原型方法</p>
+<p>🍉person.test()</p>
+<p><img src="https://deus4xmachina.github.io/Hadesss.github.io//post-images/1615459012902.png" alt="" loading="lazy"><br>
+1、定义构造函数🍏<br>
+2、创建实例对象🍎<br>
+3、给原型添加方法🍌<br>
+4、通过实例对象调用原型的方法🍉</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://deus4xmachina.github.io/Hadesss.github.io/tag/CtSzeVJBT/">
+            <span class="flex-auto">Web</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
           
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://deus4xmachina.github.io/Hadesss.github.io/tag/CtSzeVJBT/" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-              <span class="flex-auto">Web</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
+            <div class="prev-post">
+              <a href="https://deus4xmachina.github.io/Hadesss.github.io/post/xian-cheng-he-jin-cheng-liu-lan-qi-nei-he/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  线程和进程 浏览器内核
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://deus4xmachina.github.io/Hadesss.github.io/post/guan-yu-wo-di-yi-ci-gao-bo-ke-zhe-jian-shi/">
+                <h3 class="post-title">
+                  关于我第一次搞博客这件事
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
+
+        
+
       </div>
     </div>
 
